@@ -17,3 +17,17 @@ La idea original de Chocotorta surgió de una broma: pensé que "Chocoretas" ser
 
 Además, no estoy de acuerdo con la forma en que Nekotina maneja las cosas, parece que estan tomando un enfoque dirijido a la IA, y creo que hay una mejor manera de hacer las cosas. Así que decidí tomar el asunto en mis propias manos y crear un bot que sea más accesible, más transparente y más divertido.
 
+## TODO
+Esta es la lista de tareas por hacer para terminar el bot
+
+### PRINCIPALES
+  - [ ] Obtener una lista de todos los comandos y respuestas de chocolat
+  - [ ] Meter cada comando en su respectivo directorio
+  - [ ] Mejorar nekotina-scrapper
+  - [ ] Obtener los gifs para todos los comandos
+  - [ ] Recategorizar los comandos
+  - [ ] Meter cada comando en su respectivo directorio
+### Terminadas
+- [x] Agregar una implementacion de help
+- [x] Hacer a el bot independente de los comandos
+- [x] Hacer a los comandos modulos

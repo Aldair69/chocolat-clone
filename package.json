@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@discordjs/voice": "^1.0.0-dev.1753876901-c3dc58169",
+    "@distube/ytdl-core": "^4.16.12",
+    "@snazzah/davey": "^0.1.6",
+    "discord.js": "^14.21.0",
+    "ffmpeg-static": "^5.2.0",
+    "youtube-search-without-api-key": "^2.0.7"
+  }
+}

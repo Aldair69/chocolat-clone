@@ -1,10 +1,13 @@
 // Este si lo documentare XD
+const { Permissions } = require('discord.js');
 module.exports = {
   name: 'purge',
   description: 'Borra mensajes.',
   async execute(message, args) {
   // Si el primer argumento no existe no hay nada
   if (!args[0]) return message.channel.send('Por favor, proporciona argumentos');
+  // A este punto comprobamos que tenemos 1 arg o 2, ahora checamos permisos
+  if (!message.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return message.channel.send("No tienes los permisos necesarios")
   // Si args[0] no es mencion, id o nombre
   if (
     message.mentions.users.first() ||                                   // mencion

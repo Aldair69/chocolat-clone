@@ -11,14 +11,12 @@ module.exports = {
   // Si args[0] no es mencion, id o nombre
   if (
     message.mentions.users.first() ||                                   // mencion
-    /^\d{17,19}$/.test(args[0]) ||                                      // ID
-    message.guild.members.cache.find(m => 
-        m.user.username.toLowerCase() === args[0].toLowerCase()         // nombre (el lowercase es mas facil que startswith)
-    )) {
+    /^\d{17,19}$/.test(args[0])                                         // ID
+    ) {
   var borrar = args[1]
   let member;
   // Usar el nombre de usuario, ID o mencion a un usuario
-  if(args[0]) member = message.mentions.members.first() || message.guild.members.resolve(args[0]) || message.guild.members.cache.find(p => p.user.username.startsWith(args[0]))
+  if(args[0]) member = message.mentions.members.first() || message.guild.members.resolve(args[0])
   if(borrar > 100 || borrar < 1 || isNaN(borrar)) return message.channel.send('Por favor, proporciona argumentos validos'); // Skipear si los argumentos estan mal 
   message.delete() // Message delete esta duplicado pq si lo hacemos depues del fetch la api regresa DiscordAPIError[10008]: Unknown Message 
   const messages = await message.channel.messages.fetch({limit: 100})// Fetcheamos aca para luego filtrar 
